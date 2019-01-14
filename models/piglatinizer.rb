@@ -15,8 +15,9 @@ class PigLatinizer
     end
   end
 
-  def piglatinize_phrase(phrase)
-    phrase.split.collect { |word| piglatinize_word(word) }.join(" ")
+  def piglatinize_phrase(sentence)
+    sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
+    binding.pry
   end
 
   def piglatinize_word(word)
