@@ -10,7 +10,7 @@ class PigLatinizer
     if sentence.split(" ").length == 1
       piglatinize_word(sentence)
       #binding.pry
-    else 
+    else
       piglatinize_sentence(sentence)
 
     end
@@ -18,7 +18,7 @@ class PigLatinizer
 
   def piglatinize_sentence(sentence)
     sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
-    binding.pry
+    #binding.pry
   end
 
   def piglatinize_word(word)
