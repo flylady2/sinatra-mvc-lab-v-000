@@ -8,14 +8,15 @@ class PigLatinizer
 
   def piglatinize(sentence)
     if sentence.split(" ").length == 1
-      piglatinize_phrase(sentence)
+      piglatinize_word(sentence)
       #binding.pry
-    else piglatinize_word(sentence)
+    else 
+      piglatinize_sentence(sentence)
 
     end
   end
 
-  def piglatinize_phrase(sentence)
+  def piglatinize_sentence(sentence)
     sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
     binding.pry
   end
